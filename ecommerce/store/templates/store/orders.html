@@ -1,0 +1,74 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Buy now{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+    {% if orders_placed %}
+    <div class="row">
+        <h3>Приветствуем вас, {{request.user}}</h3>
+        <div class="col-sm-2 border-end">
+            <ul class="list-unstyled">
+                <li class="d-grid"><a class="btn btn-primary" href="{% url 'orders' %}">Заказы: </a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-sm-9 offset-sm-1">
+            {% for order in orders_placed %}
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="{{order.product.product_image.url}}" class="img-fluid" height="100" width="100"/>
+                </div>
+                <div class="col-sm-7">
+                    <p>Товар: {{order.product.title}}</p>
+                    <p>Количество: {{order.quantity}}</p>
+                    <p>Цена: {{order.total_cost}}</p>
+                </div>
+                <div class="col-sm-3">
+                    <p>Статус заказа: {{order.status}}</p>
+                    {% if order.status == 'Принят' %}
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    {% endif %}
+                    {% if order.status == 'В пути' %}
+                    <div class="progress"></div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    {% endif %}
+                    {% if order.status == 'Отмена' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+
+                    </div>
+                    {% endif %}
+                    {% if order.status == 'Доставлен' %}
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+
+                    </div>
+                    {% endif %}
+
+                    {% if order.status == 'Упакован' %}
+                    <div class="progress"></div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    {% endif %}
+                    
+            </div>
+            {% endfor %}
+            
+            {% else %}
+            <div class="container text-center">
+            <h4>Приветствуем, {{request.user}}</h6>
+            <h5 style="margin-top: 30px;">Заказов пока нет.</h5>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock main-content %}

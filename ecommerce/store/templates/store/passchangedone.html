@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Cnange Password{% endblock title %}
+
+{% block main-content %}
+    <div class="container my-5">
+        <div class="row">
+            <h3>Приветствуем, {{request.user}}!</h3>
+        
+            <div class="col-sm-2 border-end">
+                <ul class="list-unstyled">
+                    <li class="d-grid"><a href="#" class="btn btn-danger">Сменить пароль</a></li>
+                </ul>
+            </div> 
+            <div class="col-sm-9 offset-sm-1 text-center">
+                <h3>Пароль успешно изменен</h3>
+            <div>
+                <img style="display: block; margin: 0 auto;" src="{% static 'store/images/gif/giphy.gif' %}"  allowfullscreen frameborder="0" height="200" width="200"></iframe>
+                
+            </div>
+        </div>
+    </div>    
+</div>
+{% endblock main-content %}

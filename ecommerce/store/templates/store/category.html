@@ -1,0 +1,20 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Category{% endblock title %}
+
+{% block main-content %}
+<br><br>
+<div class="row">
+        {% for prod in product %}
+            <div class="product-item">
+                <img src="{{prod.product_image.url}}" width="300px" height="200px">
+                <div class="product-list">
+                <h3>{{prod.title}}</h3>
+                    <span class="price">${{prod.discounted_price}}|<small class="fw-light text-decoration-line-through">{{prod.selling_price}}</small></span>
+                    <a href="{% url 'productdescription' prod.id %}" class="button">Обзор</a>
+                </div>
+            </div>
+            
+        {% endfor %}
+    </div>     
+{% endblock main-content %}

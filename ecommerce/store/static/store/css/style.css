@@ -1,0 +1,191 @@
+
+.buttermilk{
+    background-color:#fff;
+    background-image:linear-gradient(rgb(255, 255, 255), #ffffff);
+    background-image:-webkit-linear-gradient(rgb(255, 255, 255), #ffffff);
+    background-image:-moz-linear-gradient(rgb(255, 255, 255), #fff);
+    background-image:-ms-linear-gradient(rgb(255, 255, 255), #fff);
+    background-image:-o-linear-gradient(rgb(255, 255, 255), #fff);
+    padding:50px 40px;
+    border:1px solid #efe8e1;
+    padding-bottom:20px;
+}
+
+.smbg{
+    background-color:#fff;
+    background-image:linear-gradient(rgb(255, 255, 255), #ffffff);
+    background-image:-webkit-linear-gradient(rgb(255, 255, 255), #ffffff);
+    background-image:-moz-linear-gradient(rgb(255, 255, 255), #fff);
+    background-image:-ms-linear-gradient(rgb(255, 255, 255), #fff);
+    background-image:-o-linear-gradient(rgb(255, 255, 255), #fff);
+}
+
+.curdbgpro{
+    background-color:#fff;
+    background-image:linear-gradient(rgb(255, 255, 255), #ffffff);
+    background-image:-webkit-linear-gradient(rgb(255, 255, 255), #ffffff);
+    background-image:-moz-linear-gradient(rgb(255, 255, 255), #fff);
+    background-image:-ms-linear-gradient(rgb(255, 255, 255), #fff);
+    background-image:-o-linear-gradient(rgb(255, 255, 255), #fff);
+}
+
+* {
+    box-sizing: border-box;
+ }
+ .product-item {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 2px solid #F5F5F5;
+    background: white;
+    font-family: "Open Sans";
+    transition: .3s ease-in;
+ }
+ .product-item:hover {
+    border-bottom: 2px solid #fc5a5a;
+ }
+ .product-item img {
+    display: block;
+    width: 100%;
+ }
+ .product-list {
+    background: #fafafa;
+    padding: 15px 0;
+ }
+ .product-list h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #444444;
+    margin: 0 0 10px 0;
+ }
+ .price {
+    font-size: 16px;
+    color: #fc5a5a;
+    display: block;
+    margin-bottom: 12px;
+ }
+ .button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    background: #cccccc;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 28px;
+    transition: .3s ease-in;
+ }
+ .product-item:hover .button {
+    background: #fc5a5a;
+ }
+
+
+ @import url(https://fonts.googleapis.com/css?family=Tenor+Sans|PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic);
+ body {
+    margin: 0;
+ }
+ .post {
+    width: 660px;
+    margin: 0 auto;
+    text-align: center;
+ }
+ .post-header {
+    margin-bottom: 35px;
+ }
+ h1 {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 26px;
+    color: #111;
+    letter-spacing: 2px;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+ }
+ .dots span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #DDDDDD;
+    border-radius: 50%;
+    box-shadow: 12px 0 0 0 #DDDDDD, 24px 0 0 0 #DDDDDD, -12px 0 0 0 #DDDDDD, -24px 0 0 0 #DDDDDD;
+ }
+ .info {
+    margin-top: 14px;
+ }
+ span {
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+    font-family: 'PT Serif', serif;
+ }
+ figure {
+    position: relative;
+    margin: 0 0 30px;
+ }
+ figure:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 20px solid white;
+    left: calc(50% - 14px);
+    left: -webkit-calc(50% - 14px);
+    top: 0;
+ }
+ img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+ figcaption {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 1.6;
+    background: rgba(0, 0, 0, .6);
+    padding: 15px;
+ }
+ p {
+    font-family: 'PT Serif', serif;
+    line-height: 1.8;
+    color: #555555;
+    font-size: 14px;
+ }
+
+
+ #cart-icon{
+	width:40px;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color:black;
+	background-color: gainsboro;
+	width: 20px;
+	height: 25px;
+	border-radius: 40%;
+	font-size: 14px;
+}
+
+
+
+
+
+
+ 
+
+
+
+

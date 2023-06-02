@@ -1,0 +1,41 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}Address{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <h3>Приветствуем, {{request.user}}!</h3>
+    
+        <div class="col-sm-2 border-end">
+            <ul class="list-unstyled">
+                <li class="d-grid"><a href="{% url 'profile' %}" class="btn">Профиль</a></li>
+                <li class="d-grid"><a href="{% url 'address' %}" class="btn btn-danger">Адрес</a></li>
+            </ul>
+        </div> 
+
+        <div class="col-sm-8 offset-sm-1">
+            <div class="row">
+                {% for ad in add %}
+                <div class="col-sm-6">
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h3>Адрес {{forloop.counter}}</h3>
+                            <p>Имя: {{ad.name}}</p>
+                            <p>Адрес: {{ad.locality}}</p>
+                            <p>Мобильный телефон: {{ad.mobile}}</p>
+                            <p>Город: {{ad.city}}</p>
+                            <p>Страна: {{ad.country}}</p>
+                            <p>Почтовый индекс: {{ad.zipcode}}</p>
+                        <p class="text-center"><a href="{% url 'updateAddress' pk=ad.id %}" type="button" class="btn btn-primary">Обновить</a></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock main-content %}

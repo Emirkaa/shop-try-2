@@ -1,0 +1,31 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block main-content %}
+     <div class="container my-5">
+        <div class="row">
+            <h3>Приветствуем, {{request.user}}</h3>
+        </div>
+        <div class="col-sm-8 offset-sm-1">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% for x in form %}
+                    {{x.label_tag}} {{x}} <small class="text-danger">{{x.errors|striptags}}</small><br>
+                {% endfor %}
+                <div class="col-12 mt3">
+                    <button type="submit" class="btn btn-primary">Обновить</button>
+                    <a href="{% url 'address' %}" type="button" class="btn btn-danger">Назад</a>
+
+                </div>
+                {% if form.non_field_errors %}
+                    {% for x in form.non_field_errors %}
+                        <p class="alert alert-danger my-3">
+                            {{x}}
+                        </p>
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+     </div>
+
+{% endblock main-content %}
